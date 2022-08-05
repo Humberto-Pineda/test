@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs Creator</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Sedgwick+Ave+Display&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="#">
+        <img id="logoImg" src="img/Piratey.jpg" width="300px" height="250px">
+        <h1>Cap'n Madlib on the High Seas</h1>
+      </a>
+    </div>
+    <nav id="links">
+      <ul>
+        <li id="gtku"><a href="about.html">Get To Know Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  </header>
+  <main>
+    <div id="form">
+      <form>
+        <fieldset>
+          <legend>Fill out the forms!</legend><br>
+          <label>
+            <input type="text" name="noun1" placeholder="Noun" id="noun1">
+          </label>
+          <label>
+            <input type="text" name="noun2" placeholder="Noun" id="noun2">
+          </label>
+          <label>
+            <input type="text" name="verb1" placeholder="Verb" id="verb1">
+          </label>
+          <label>
+            <input type="text" name="verb2" placeholder="Verb" id="verb2">
+          </label>
+          <label>
+            <input type="text" name="adj1" placeholder="Adjective" id="adj1">
+          </label>
+          <label>
+            <input type="text" name="adj2" placeholder="Adjective" id="adj2">
+          </label>
+          <button type="submit">Gimme Gimme</button>
+        </fieldset>
+      </form>
+    </div>
+    <section  id="battleshipAnimation">  
+          
+      <div id="battleship" onclick="audio.play();"></div>
+      <div class="directions-box">
+        <p id="directions">Go on, Landlubber! Try to find me ships!</p>
+      </div>
+      <div id="audioControl">
+        <audio controls autoplay loop>
+          <source src="/sounds/drunken-sailor.wav" type="audio/wav">Unsupported Audio.
+        </audio>
+      </div>
+      <div id='madbox'>
+      <article id="madlibArt">
+        <button id="random2" type="submit">Random</button>
+        <div id="madlib"></div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer id="aboutfoot">
+    <p>&copy Code Fellows design by:  Humberto Pineda,  Jordan Yamada, Carlos Herrera, Jeffrey Smith</p>
+  </footer>
+  <script type="text/javascript">
+    const audio = new Audio();
+    audio.src = "/sounds/water-bomb.wav";
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/battleship.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkcyan;
+  background-image: url('/img/Ocean-Whale.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* height: 100vh; */
+}
+
+
+#battleshipAnimation {
+  display: none;
+  justify-content: center;
+  background-size: contain;
+}
+
+#battleshipAnimation.gridAppears {
+  display: flex;
+}
+
+#battleshipAnimation.battleship-section {
+  display: flex;
+  animation: slide-in forwards .6s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-90%);
+  }
+}
+
+#battleship {
+  margin: 2rem;
+  background: url(/img/water-81.gif);
+  display: grid;
+  grid-template-columns: repeat(5, 5rem);
+  grid-template-rows: repeat(5, 5rem);
+  border: 10px solid black;
+  background-color: blue;
+}
+
+#battleship>* {
+  border: 1px solid whitesmoke;
+}
+
+#battleship>*:hover {
+  cursor: pointer;
+  border: 3px solid whitesmoke;
+  width: 80px;
+  height: 80px;
+}
+
+.battleship-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo {
+  width: 75%;
+  font-family: 'Permanent Marker', cursive;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#logo img {
+  border-radius: 30%;
+}
+
+.logoImgSlide {
+  animation: slide-right forwards 8s;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-1000%);
+  }
+
+  to {
+    transform: translateX(10%);
+  }
+}
+
+.lo footer {
+  clear: both;
+  height: 80px;
+  width: 1800px;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  font-family: arial, helvetica;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+/* Both html style */
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+}
+
+#logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#logo h1 {
+  justify-content: flex-start;
+  padding-left: 3rem;
+  font-size: 5rem;
+}
+
+#links {
+  width: 25%;
+  padding: 1rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  flex-wrap: nowrap;
+}
+
+#links li {
+  display: inline;
+}
+
+#links li a {
+  text-decoration: none;
+  width: 100%;
+}
+
+#form {
+  width: 30%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.formAnimation {
+  animation: goAway forwards 1.2s;
+}
+
+@keyframes goAway {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding: 1rem;
+}
+
+fieldset {
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label input {
+  font-size: 30px;
+}
+
+button {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: green;
+}
+
+#reset {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: green;
+}
+
+button:active {
+  font-size: 1.5rem;
+}
+
+#madlib {
+  display: flex;
+  justify-content: center;
+  font-family: 'Bangers', cursive;
+  color: white;
+  text-decoration: none;
+  -webkit-text-stroke: 1px black;
+  font-size: xx-large;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+
+.directions-box {
+  display: flex;
+  justify-content: center;
+  font-family: 'Bangers', cursive;
+  color: goldenrod;
+  text-decoration: none;
+  -webkit-text-stroke: 1px black;
+  font-size: xx-large;
+}
+
+#audioControl {
+  display: flex;
+  justify-content: center;
+}
+
+audio {
+  background-color: transparent;
+  border: solid darkcyan;
+  border-radius: 25px;
+  margin-top: 17px;
+}
+
+/* about html */
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.background-img {
+  /* background-color: darkcyan;
+  background-image: url('/img/Ocean-Whale.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; */
+  text-shadow: black 1px 1px px;
+  left: 80px;
+  top: 2px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+#back {
+  font-size: 1.5rem;
+}
+
+/* .bio-info-jeff {
+  font-family: 'Ibarra Real Nova', serif;
+} */
+
+#abouthead {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li a {
+  color: darkgoldenrod;
+  text-decoration: none;
+  -webkit-text-stroke: 1px black;
+}
+
+a:hover {
+  font-size: 2rem;
+}
+
+#abouth1 {
+  color: goldenrod;
+
+}
+
+#aboutmain {
+  margin: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: 47% 6% 47%;
+  grid-template-rows: 40% 20% 40%;
+}
+
+#bert {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#bert img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: left;
+}
+
+#carlos {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#carlos img {
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: left;
+}
+
+#jordan {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#jordan img {
+  margin-right: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: right;
+}
+
+#jordan a {
+  margin-bottom: 10px;
+}
+
+#jeff {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+
+
+#jeff img {
+  margin-right: 10px;
+  height: 260px;
+  width: 200px;
+  border-radius: 20px;
+  float: right;
+}
+
+#aboutfoot {
+  /* font-family:'Nerko One', cursive; */
+  -webkit-text-stroke: 1px black;
+  height: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+  color: lightcoral;
+}
+
+#madbox {
+  display: flex;
+  justify-content: center;
+}
+
+#madlibArt {
+  width: max-content;
+  background: url(https://static.vecteezy.com/system/resources/thumbnails/003/578/954/small_2x/pine-wood-plank-texture-free-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  animation: move-up forwards .1s;
+  margin-top: 1rem;
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(900%);
+  }
+
+  to {
+    transform: translateY(00%);
+  }
+}
+
+.social-media {
+  height: 70px;
+}
+
+#headlogo>a>img {
+  border-radius: 10px;
+  border: 5px solid blue;
+}
